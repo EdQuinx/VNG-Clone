@@ -4,6 +4,135 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .body-wrapper {
+    @apply flex min-h-screen flex-1 flex-col;
+  }
+
+  .header-wrapper {
+    @apply bg-ctWhite fixed top-0 z-[1300] flex max-h-24 w-full items-center border-b border-solid border-b-ctOrange1 shadow-[8px_4px_6px_0px_rgba(0,_0,_0,_0.15)];
+  }
+
+  .header-service-wrapper {
+    @apply flex h-9 w-screen justify-center;
+  }
+
+  .service-items-wrapper {
+    @apply w-full;
+  }
+
+  .service-items {
+    @apply flex w-full items-center overflow-y-hidden;
+  }
+
+  .service-item-a {
+    @apply flex cursor-pointer items-center justify-center gap-[4px] rounded bg-gradient-to-b no-underline transition duration-200 ease-linear hover:bg-[#FF7430];
+  }
+
+  .s-item-p {
+    @apply m-0 text-[0.75rem] font-medium not-italic leading-[120%];
+  }
+
+  .svg-header {
+    @apply h-[1em] w-[1em] shrink-0 text-xl text-[transparent] transition duration-200 ease-in-out;
+  }
+
+  @media (min-width: 0px) {
+    .body-wrapper {
+      @apply pb-[67px];
+    }
+
+    .header-wrapper {
+      @apply flex-col-reverse pb-2;
+    }
+
+    .header-service-wrapper {
+      @apply bg-ctWhite;
+    }
+
+    .service-items-wrapper {
+      @apply max-w-[100vw] px-4 py-0;
+    }
+
+    .service-items {
+      @apply gap-[6px] overflow-x-auto;
+    }
+
+    .service-item-a {
+      @apply flex-1 bg-ctOrange1 px-1 py-2 hover:bg-opacity-40;
+    }
+
+    .s-item-p {
+      @apply text-[#6e625e];
+    }
+
+    .svg-header {
+      @apply stroke-[#6e625e] text-ctOrange1;
+    }
+  }
+
+  @media (min-width: 743.98px) {
+    .service-items-wrapper {
+      @apply max-w-[100vw] px-10 py-0;
+    }
+
+    .service-items {
+      @apply overflow-x-hidden;
+    }
+  }
+
+  @media (min-width: 1079.98px) {
+    .body-wrapper {
+      @apply pb-0;
+    }
+
+    .header-wrapper {
+      @apply flex-col pb-0;
+    }
+
+    .header-service-wrapper {
+      @apply bg-ct373;
+    }
+
+    .service-items-wrapper {
+      @apply max-w-[1080px];
+    }
+
+    .service-items {
+      @apply gap-0;
+    }
+
+    .service-item-a {
+      @apply flex-[0] bg-[initial] p-2 hover:bg-[#FF7430];
+    }
+
+    .s-item-p {
+      @apply text-ctWhite;
+    }
+
+    .svg-header {
+      @apply stroke-ctWhite text-ct373;
+    }
+  }
+
+  @media (min-width: 1080.98px) {
+    .service-items-wrapper {
+      @apply p-0;
+    }
+  }
+
+  @media (min-width: 1439.98px) {
+    .service-items-wrapper {
+      @apply max-w-[1080px];
+    }
+  }
+
+  @media (min-width: 1599.98px) {
+    .service-items-wrapper {
+      @apply max-w-[1256px];
+    }
+  }
+}
 * {
   margin: 0;
   padding: 0;
