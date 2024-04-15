@@ -1,4 +1,5 @@
 import Header from "./layouts/header";
+import Main from "./layouts/main";
 function App() {
   return (
     <>
@@ -7,6 +8,7 @@ function App() {
       }
       <main className="body-wrapper">
         <Header />
+        <Main />
       </main>
     </>
   );

@@ -112,6 +112,30 @@ body {
     @apply relative m-0 box-border flex h-[1rem] min-w-[5.5rem] transform cursor-pointer select-none items-center justify-center rounded border-[0] bg-[#f05622] px-5 py-2 text-base font-bold leading-normal text-[#fff] no-underline shadow-md outline-0 transition-all duration-[250] ease-in-out active:bg-opacity-55 motion-safe:hover:scale-110;
   }
 
+  .main-layout {
+    @apply w-full;
+  }
+
+  .slider-wrapper {
+    @apply relative flex w-full justify-center;
+  }
+
+  .bg-slider {
+    @apply relative z-[5] w-full overflow-hidden rounded-[20px];
+  }
+
+  .bg-slider:before {
+    @apply absolute z-10 box-border h-full w-full rounded-[20px] shadow-lg;
+    content: "";
+    border: 8px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 18px 0px #fff;
+    z-index: 1;
+  }
+  
+  .desc-slider {
+    @apply m-0 max-w-[650px] text-center text-base font-normal not-italic leading-[150%] text-white;
+  }
+
   @media (min-width: 0px) {
     .body-wrapper {
       @apply pb-[67px];
@@ -188,6 +212,22 @@ body {
     .btn-login {
       @apply h-[2rem] px-3 py-[6px] text-[12px];
     }
+
+    .main-layout {
+      @apply px-4 py-0;
+    }
+
+    .slider-wrapper {
+      @apply h-[640px];
+    }
+
+    .bg-slider {
+      @apply h-[78.5%];
+    }
+
+    .desc-slider {
+      @apply px-2 text-[12px];
+    }
   }
 
   @media (min-width: 0px) and (orientation: landscape) {
@@ -199,6 +239,10 @@ body {
   @media (min-width: 575.98px) {
     .toolbar-items {
       @apply min-h-16 px-6;
+    }
+
+    .main-layout {
+      @apply max-w-[100vw];
     }
   }
 
@@ -217,6 +261,22 @@ body {
 
     .language {
       @apply gap-2;
+    }
+
+    .main-layout {
+      @apply max-w-[100vw] px-10 py-0;
+    }
+
+    .slider-wrapper {
+      @apply h-[720px];
+    }
+
+    .bg-slider {
+      @apply h-[67.81%];
+    }
+
+    .desc-slider {
+      @apply text-sm;
     }
   }
 
@@ -310,10 +370,26 @@ body {
     .btn-login {
       @apply px-3 py-5 text-sm;
     }
+
+    .main-layout {
+      @apply max-w-[100vw];
+    }
+
+    .bg-slider {
+      @apply h-[78.31%];
+    }
+
+    .desc-slider {
+      @apply px-0;
+    }
   }
 
   @media (min-width: 1080.98px) {
     .nav-items-wrapper {
+      @apply p-0;
+    }
+
+    .main-layout {
       @apply p-0;
     }
   }
@@ -340,6 +416,18 @@ body {
   @media (min-width: 1599.98px) {
     .nav-items-wrapper {
       @apply max-w-[1256px];
+    }
+
+    .main-layout {
+      @apply max-w-[1256px];
+    }
+
+    .slider-wrapper {
+      @apply h-[806px];
+    }
+
+    .bg-slider {
+      @apply h-[79.45%];
     }
   }
 }
