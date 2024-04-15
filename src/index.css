@@ -4,20 +4,47 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+body,
+html {
+  overflow: overlay;
+}
+
+body {
+  display: block;
+  padding: 0;
+}
+
+.custom-stroke-transition {
+  transition-property: stroke;
+}
+.important-text-transparent {
+  color: transparent !important;
+}
+
 @layer components {
   .body-wrapper {
     @apply flex min-h-screen flex-1 flex-col;
   }
 
   .header-wrapper {
-    @apply bg-ctWhite fixed top-0 z-[1300] flex max-h-24 w-full items-center border-b border-solid border-b-ctOrange1 shadow-[8px_4px_6px_0px_rgba(0,_0,_0,_0.15)];
+    @apply fixed top-0 z-[1300] flex max-h-24 w-full items-center border-b border-solid border-b-ctOrange1 bg-ctWhite shadow-[8px_4px_6px_0px_rgba(0,_0,_0,_0.15)];
   }
 
   .header-service-wrapper {
     @apply flex h-9 w-screen justify-center;
   }
 
-  .service-items-wrapper {
+  .nav-items-wrapper {
     @apply w-full;
   }
 
@@ -37,6 +64,54 @@
     @apply h-[1em] w-[1em] shrink-0 text-xl text-[transparent] transition duration-200 ease-in-out;
   }
 
+  .toolbar-root {
+    @apply p-0;
+  }
+
+  .toolbar-items {
+    @apply relative flex min-h-14 items-center justify-between pl-4 pr-4;
+  }
+
+  .logo-header-wrapper {
+    @apply relative;
+  }
+
+  .logo-img-wrap {
+    @apply relative flex;
+  }
+
+  .dot-language {
+    @apply w-[2px] rounded-md bg-[#6e625e];
+  }
+
+  .language {
+    @apply flex items-center;
+  }
+
+  .btn-language {
+    @apply relative m-0 ml-[-6px] box-border flex cursor-pointer select-none items-center justify-center gap-1 rounded border-none bg-ctWhite p-[6px] text-base font-bold normal-case leading-normal text-[#f05c22] no-underline outline-0 transition-colors duration-200 ease-linear hover:bg-[#f05c22] hover:bg-opacity-20;
+  }
+
+  .svg-language {
+    @apply custom-stroke-transition important-text-transparent inline-block h-[1em] w-[1em] shrink-0 select-none fill-[currentColor] delay-0 duration-200 ease-linear;
+  }
+
+  .text-language {
+    @apply m-0 font-normal leading-[150%] text-[#615653];
+  }
+
+  .nav-items {
+    @apply flex h-full flex-grow-0 flex-row items-center justify-center;
+  }
+
+  .nav-box {
+    @apply flex h-full items-center no-underline;
+  }
+
+  .btn-login {
+    @apply relative m-0 box-border flex h-[1rem] min-w-[5.5rem] transform cursor-pointer select-none items-center justify-center rounded border-[0] bg-[#f05622] px-5 py-2 text-base font-bold leading-normal text-[#fff] no-underline shadow-md outline-0 transition-all duration-[250] ease-in-out active:bg-opacity-55 motion-safe:hover:scale-110;
+  }
+
   @media (min-width: 0px) {
     .body-wrapper {
       @apply pb-[67px];
@@ -50,7 +125,7 @@
       @apply bg-ctWhite;
     }
 
-    .service-items-wrapper {
+    .nav-items-wrapper {
       @apply max-w-[100vw] px-4 py-0;
     }
 
@@ -69,15 +144,101 @@
     .svg-header {
       @apply stroke-[#6e625e] text-ctOrange1;
     }
+
+    .toolbar-items {
+      @apply pt-1;
+    }
+
+    .logo-header-wrapper {
+      @apply min-w-[85px];
+    }
+
+    .h1-style {
+      @apply m-0 text-xs font-medium uppercase text-[#f05c22];
+    }
+
+    .logo-img-wrap {
+      @apply h-3 w-[85px];
+    }
+
+    .dot-language {
+      @apply h-[14px];
+    }
+
+    .language {
+      @apply gap-1;
+    }
+
+    .btn-language {
+      @apply min-w-[43px];
+    }
+
+    .svg-language {
+      @apply text-[16px];
+    }
+
+    .text-language {
+      @apply text-[14px];
+    }
+
+    .nav-items {
+      @apply hidden;
+    }
+
+    .btn-login {
+      @apply h-[2rem] px-3 py-[6px] text-[12px];
+    }
+  }
+
+  @media (min-width: 0px) and (orientation: landscape) {
+    .toolbar-items {
+      @apply min-h-12;
+    }
+  }
+
+  @media (min-width: 575.98px) {
+    .toolbar-items {
+      @apply min-h-16 px-6;
+    }
   }
 
   @media (min-width: 743.98px) {
-    .service-items-wrapper {
+    .nav-items-wrapper {
       @apply max-w-[100vw] px-10 py-0;
     }
 
     .service-items {
       @apply overflow-x-hidden;
+    }
+
+    .h1-style {
+      @apply ml-2;
+    }
+
+    .language {
+      @apply gap-2;
+    }
+  }
+
+  @media (min-width: 767.98px) {
+    .dot-language {
+      @apply h-4;
+    }
+  }
+
+  @media (min-width: 991.98px) {
+    .nav-items {
+      @apply gap-[1.3888889vw];
+    }
+
+    .nav-box {
+      @apply p-[0.694444444vw];
+    }
+  }
+
+  @media (min-width: 1055.98px) {
+    .toolbar-root {
+      @apply h-[60px] min-h-[60px];
     }
   }
 
@@ -94,7 +255,7 @@
       @apply bg-ct373;
     }
 
-    .service-items-wrapper {
+    .nav-items-wrapper {
       @apply max-w-[1080px];
     }
 
@@ -113,32 +274,72 @@
     .svg-header {
       @apply stroke-ctWhite text-ct373;
     }
+
+    .toolbar-items {
+      @apply p-0 pt-0;
+    }
+
+    .h1-style {
+      @apply text-xl;
+    }
+
+    .logo-img-wrap {
+      @apply h-5 w-[141px];
+    }
+
+    .dot-language {
+      @apply h-[22px];
+    }
+
+    .btn-language {
+      @apply min-w-[60px];
+    }
+
+    .svg-language {
+      @apply text-2xl;
+    }
+
+    .text-language {
+      @apply text-[16px];
+    }
+
+    .nav-items {
+      @apply flex;
+    }
+
+    .btn-login {
+      @apply px-3 py-5 text-sm;
+    }
   }
 
   @media (min-width: 1080.98px) {
-    .service-items-wrapper {
+    .nav-items-wrapper {
       @apply p-0;
     }
   }
 
+  @media (min-width: 1199.98px) {
+    .logo-header-wrapper {
+      @apply min-w-[166px];
+    }
+
+    .nav-items {
+      @apply gap-[20px];
+    }
+
+    .nav-box {
+      @apply p-[10px];
+    }
+  }
   @media (min-width: 1439.98px) {
-    .service-items-wrapper {
+    .nav-items-wrapper {
       @apply max-w-[1080px];
     }
   }
 
   @media (min-width: 1599.98px) {
-    .service-items-wrapper {
+    .nav-items-wrapper {
       @apply max-w-[1256px];
     }
   }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Be Vietnam Pro", sans-serif;
 }

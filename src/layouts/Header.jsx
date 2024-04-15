@@ -5,7 +5,7 @@ const Header = () => {
         <div className="h-24"></div>
         <div className="header-wrapper">
           <div className="header-service-wrapper">
-            <div className="service-items-wrapper">
+            <div className="nav-items-wrapper">
               <div className="service-items">
                 <a
                   href="#"
@@ -134,6 +134,119 @@ const Header = () => {
                   </button>
                   <p className="s-item-p">Support</p>
                 </a>
+              </div>
+            </div>
+          </div>
+          <div className="nav-items-wrapper">
+            <div className="toolbar-root toolbar-items">
+              <div className="flex items-center">
+                <div className="logo-header-wrapper">
+                  <div className="absolute left-0 top-0 z-[-1] flex h-full w-auto items-center">
+                    <h1 className="h1-style">DDTank1</h1>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-ctWhite">
+                      <div className="flex h-full items-center">
+                        <a href="#" target="_self" className="flex">
+                          <div className="logo-img-wrap">
+                            <img
+                              className="h-full w-full object-contain text-[transperent]"
+                              src="./assets/img/logo.webp"
+                              alt="DDTank1"
+                            />
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div className="dot-language"></div>
+                    <div className="language">
+                      <div className="">
+                        <button
+                          className="btn-language"
+                          type="button"
+                          tabIndex={0}
+                        >
+                          <svg
+                            className="svg-language"
+                            focusable="false"
+                            aria-hidden="true"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            stroke="#6E625E"
+                          >
+                            <path
+                              d="M12.3812 22C17.9041 22 22.3812 17.5228 22.3812 12C22.3812 6.47715 17.9041 2 12.3812 2C6.85838 2 2.38123 6.47715 2.38123 12C2.38123 17.5228 6.85838 22 12.3812 22Z"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            ></path>
+                            <path
+                              d="M8.3812 3H9.3812C7.4312 8.84 7.4312 15.16 9.3812 21H8.3812"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            ></path>
+                            <path
+                              d="M15.3812 3C17.3312 8.84 17.3312 15.16 15.3812 21"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            ></path>
+                            <path
+                              d="M3.38123 16V15C9.22123 16.95 15.5412 16.95 21.3812 15V16"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            ></path>
+                            <path
+                              d="M3.38123 9.0001C9.22123 7.0501 15.5412 7.0501 21.3812 9.0001"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            ></path>
+                          </svg>
+                          <p className="text-language">EN</p>
+                          <span className="pointer-events-none absolute inset-0 z-0 overflow-hidden rounded-[inherit]"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="nav-items">
+                <div className="flex">
+                  <div className="nav-box">
+                    <a href="#" target="_self" className="no-underline">
+                      <div className="flex cursor-pointer items-center text-[16px] capitalize leading-[32px] text-[#605653] no-underline hover:text-[#f05c22] active:font-bold">
+                        Home
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="nav-box">
+                    <a href="#" target="_self" className="no-underline">
+                      <div className="flex cursor-pointer items-center text-[16px] capitalize leading-[32px] text-[#605653] no-underline hover:text-[#f05c22] active:font-bold">
+                        News
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="nav-box">
+                    <a href="#" target="_self" className="no-underline">
+                      <div className="flex cursor-pointer items-center text-[16px] capitalize leading-[32px] text-[#605653] no-underline hover:text-[#f05c22] active:font-bold">
+                        Guides
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="block">
+                <button className="btn-login">Login</button>
               </div>
             </div>
           </div>
